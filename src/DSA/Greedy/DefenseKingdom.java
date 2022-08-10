@@ -39,8 +39,6 @@ public class DefenseKingdom {
         }
         
         System.out.println(maxW * maxH);
-//        System.out.println(maxW);
-//        System.out.println(maxH);
     }
     
     
