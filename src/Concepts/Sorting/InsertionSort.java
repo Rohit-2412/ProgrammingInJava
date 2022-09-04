@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class InsertionSort {
     public static void main(String[] args) {
-        int[]arr = FillArray.fill(10);
+        int[]arr = FillArray.fill(5);
         sort(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -24,7 +24,7 @@ public class InsertionSort {
                 j--;
             }
             arr[j + 1] = currentElement;
-            
+            System.out.println(Arrays.toString(arr));
         }
     }
     

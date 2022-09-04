@@ -88,7 +88,7 @@ public class BookAllocation {
         
         while (low <= high) {
             int mid = (low + high) >> 1; // right shift operator
-            int need = 1; // number of students rwquired
+            int need = 1; // number of students required
             int curr = 0; // number of pages in current slot
             
             for (int i : arr) {

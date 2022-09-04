@@ -18,7 +18,7 @@ public class RotateArray {
             int temp = arr[l];
             arr[l] = arr[r];
             arr[r] = temp;
-            
+        
             l++;
             r--;
         }

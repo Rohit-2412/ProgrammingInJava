@@ -37,7 +37,7 @@ class Instructor {
 }
 
 // Defining and implementing class course
-class Course {
+class CourseC {
     String code; // course code
     String name; // Name of the course
     Instructor instructor; // Instructor of the course
@@ -45,7 +45,7 @@ class Course {
     int credits; // Credits of the course
     
     // Defining a default constructor for the class
-    public Course() {
+    public CourseC() {
         this.code = ""; // assigning a default value
         this.name = ""; // assigning a default value
         this.instructor = new Instructor(); // assigning a default value
@@ -54,7 +54,7 @@ class Course {
     }
     
     // Defining a parameterised constructor for the class course
-    public Course(String code, String name, Instructor instructor, int level, int credits) {
+    public CourseC(String code, String name, Instructor instructor, int level, int credits) {
         this.code = code;  // assigning the value passed to the function to the object's data member using
         // 'this' keyword
         this.name = name;  // assigning the value passed to the function to the object's data member using
@@ -105,7 +105,7 @@ public class Answer {
         Instructor i1 = new Instructor("James Walker", 10, "Ph.D", 120000);
         
         // Initialising and defining an object of class Course using parameterised constructor
-        Course c1 = new Course("CSE212", "Computer Science", i1, 2, 5);
+        CourseC c1 = new CourseC("CSE212", "Computer Science", i1, 2, 5);
         
         // Printing c1 to the console
         System.out.println(c1);
@@ -119,7 +119,7 @@ public class Answer {
         Instructor i2 = new Instructor("Joseph Garcia", 15, "Ph.D", 180000);
         
         // Initialising and defining an object of class Course using parameterised constructor
-        Course c2 = new Course("IT323", "Information Technology", i2, 4, 3);
+        CourseC c2 = new CourseC("IT323", "Information Technology", i2, 4, 3);
         
         // Printing c2 to the console
         System.out.println(c2);

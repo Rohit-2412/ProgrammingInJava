@@ -1,7 +1,7 @@
 package DSA.Searching_Sorting;
 
 public class PainterPartition {
-    public static int findPages(int[] a, int n, int m) {
+    public static int findPainters(int[] a, int n, int m) {
         int min = 0, max = 0;
         for (int i : a) {
             max += i;

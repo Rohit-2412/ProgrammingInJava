@@ -3,6 +3,7 @@ package DSA.Binary_Search_Tree;
 public class CountNodes {
     public static void main(String[] args) {
         Node root = Node.create(new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+//        Node.printBinaryTree(root);
         System.out.println(countNode(root, 4, 8));
     }
     

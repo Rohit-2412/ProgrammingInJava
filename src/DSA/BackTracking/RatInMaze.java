@@ -45,10 +45,38 @@ import java.util.ArrayList;
 
 public class RatInMaze {
     public static void main(String[] args) {
-    
+        int[][] m = {{1, 0, 0, 0}, {1, 1, 0, 1}, {1, 1, 0, 0}, {0, 1, 1, 1}};
+        
+        System.out.println(findPath(m, 4));
     }
+    
+    
     public static ArrayList<String> findPath(int[][] m, int n) {
-    return null;
+        ArrayList<String> arrayList = new ArrayList<>();
+        String ans = "";
+        
+        if (!helper(0, 0, m, arrayList, ans)) {
+            arrayList.add("-1");
+        }
+        return arrayList;
+    }
+    
+    private static boolean helper(int x, int y, int[][] m, ArrayList<String> arrayList, String ans) {
+        if (x < 0 || y < 0 || x >= m.length || y >= m[0].length || m[x][y] == 0) return false;
+        
+        if (x == m.length - 1 && y == m[0].length - 1) {
+            arrayList.add(ans);
+            return true;
+        }
+        
+        m[x][y] = 0;
+        boolean left = helper(x, y - 1, m, arrayList, ans + 'L');
+        boolean right = helper(x, y + 1, m, arrayList, ans + 'R');
+        boolean up = helper(x - 1, y, m, arrayList, ans + 'U');
+        boolean down = helper(x + 1, y, m, arrayList, ans + 'D');
+        
+        m[x][y] = 1;
+        return up || right || left || down;
     }
     
 }
