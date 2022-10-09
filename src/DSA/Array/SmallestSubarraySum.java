@@ -3,7 +3,7 @@ package DSA.Array;
 // Smallest Subarray with sum greater than a given value
 public class SmallestSubarraySum {
     public static void main(String[] args) {
-        int arr1[] = {1, 4, 45, 6, 10, 19};
+        int[] arr1 = {1, 4, 45, 6, 10, 19};
         int x = 51;
         System.out.println(smallestSubarray(arr1, arr1.length, x));
     }

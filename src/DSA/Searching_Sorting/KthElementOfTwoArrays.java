@@ -7,7 +7,7 @@ public class KthElementOfTwoArrays {
     
     }
     
-    public static long kthElement(int arr1[], int arr2[], int n, int m, int k) {
+    public static long kthElement(int[] arr1, int[] arr2, int n, int m, int k) {
         merge(arr1, arr2, arr1.length, arr2.length);
         if (k - 1 < arr1.length) {
             return arr1[k - 1];

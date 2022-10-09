@@ -3,7 +3,7 @@ package DSA.String;
 import java.util.*;
 
 public class NextGreaterNumber {
-    static List<Integer> greaterNumber(int nums[]) {
+    static List<Integer> greaterNumber(int[] nums) {
         List<Integer> ans = new ArrayList<>();
         int infPt = 0;
         int n = nums.length - 1;

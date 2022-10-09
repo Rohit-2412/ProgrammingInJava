@@ -2,30 +2,75 @@ package Questions;
 
 import java.util.Scanner;
 
+// public class
 public class LabProgram {
-    /* main function */
+    
+    // main function
     public static void main(String[] args) {
-        Scanner scnr = new Scanner(System.in); /* instantiating an object of Scanner class for user input */
-        String userText; /* declaring a variable to store string(one line) entered by user */
-        int length = 0; /* declaring variable to store the length of characters excluding { '.' , ',' , ' ' } */
+        // creating Scanner class object for user input
+        Scanner scnr = new Scanner(System.in);
+        // variable to store size of linked list and value to be inserted in linked list
+        int size;
+        int value;
+        // storing size of linked list
+        size = scnr.nextInt();
+        // storing value to be inserted in the list
+        value = scnr.nextInt();
+        IntNode headNode = new IntNode(value); // Make head node as the first node
+        IntNode lastNode = headNode; // node to add after
+        IntNode newnode = null; // node to create
         
-        /* declaring variables for these characters */
-        char space = ' '; // space
-        char period = '.'; // period
-        char comma = ','; // comma
-        char exclamation = '!'; // exclamation
-        
-        userText = scnr.nextLine(); /* storing the input entered by user including spaces */
-        
-        /* iterating over each character of userText */
-        for (char currentChar : userText.toCharArray()) {
-            /* if the current character is not equal to anyone of the three characters then we can increment the
-            length */
-            if (currentChar != space && currentChar != period && currentChar != comma && currentChar != exclamation) {
-                length++;
-            }
+        // insert second and the rest of the nodes
+        for (int n = 0; n < size - 1; ++n) {
+            // storing value
+            value = scnr.nextInt();
+            // creating new node
+            newnode = new IntNode(value);
+            // inseting node after the last node
+            lastNode.insertAfter(newnode);
+            // making newnode as last node now
+            lastNode = newnode;
         }
-        /* printing the total length */
-        System.out.println(length);
+        // calling printlinkedlist to printing linked list using recursive function
+        printlinkedList(headNode);
+        
+    }
+    
+    // implementation of method to print linked list
+    private static void printlinkedList(IntNode head) {
+        // if head is null then return from the function
+        if (head == null) {
+        }
+        // otherwise
+        else {
+            System.out.print(head.data + ", ");
+            printlinkedList(head.next);
+        }
+        
+    }
+    
+    // implementation of IntNode class
+    static class IntNode {
+        // data members
+        int data;
+        IntNode next;
+        
+        // parametrized constructor
+        public IntNode(int value) {
+            // assigning values
+            this.data = value;
+            this.next = null;
+        }
+        
+        // default constructor
+        public IntNode() {
+            this.data = 0;
+            this.next = null;
+        }
+        
+        // function to insert node at the end of the list
+        public void insertAfter(IntNode node) {
+            this.next = node;
+        }
     }
 }

@@ -15,7 +15,7 @@ public class JobSequencing {
         
     }
     
-    static int[] JobScheduling(Job arr[], int n) {
+    static int[] JobScheduling(Job[] arr, int n) {
         Arrays.sort(arr, (a, b) -> b.profit - a.profit);
         
         // getting max deadline

@@ -88,8 +88,8 @@ public class Node {
             }
             
             if (treeLevel.isEmpty()) {
-                System.out.println("");
-                System.out.println("");
+                System.out.println();
+                System.out.println();
                 treeLevel = temp;
                 temp = new LinkedList<>();
                 counter++;

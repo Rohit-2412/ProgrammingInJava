@@ -24,10 +24,8 @@ public class RestoreIpAddress {
         // then we will add it to the current list
         if (curr.size() == 3) {
             if (checkValid(s)) {
-                StringBuilder sb = new StringBuilder(curr.get(0));
-                sb.append(".").append(curr.get(1)).append(".").append(curr.get(2)).append(".").append(s);
-                
-                result.add(sb.toString());
+    
+                result.add(curr.get(0) + "." + curr.get(1) + "." + curr.get(2) + "." + s);
             }
             return;
         }

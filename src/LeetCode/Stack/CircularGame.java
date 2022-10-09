@@ -19,6 +19,6 @@ public class CircularGame {
             list.remove(idx); // removing the friend
             start = (idx++) % list.size(); // next friend's idx
         }
-        return (int) list.get(0);
+        return list.get(0);
     }
 }

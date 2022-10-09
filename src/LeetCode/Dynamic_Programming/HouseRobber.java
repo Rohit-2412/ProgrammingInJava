@@ -7,7 +7,12 @@ package LeetCode.Dynamic_Programming;
 // can rob tonight without alerting the police.
 
 public class HouseRobber {
-    public int rob(int[] nums) {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 5, 8, 7, 4};
+        System.out.println(rob(arr));
+    }
+    
+    public static int rob(int[] nums) {
         if (nums == null || nums.length == 0) return 0;
         if (nums.length == 1) return nums[0];
         
@@ -19,6 +24,7 @@ public class HouseRobber {
             // either we are robbing 1st & 3rd house or 2nd house (for 3 houses)
             dp[i] = Math.max(nums[i] + dp[i - 2], dp[i - 1]);
         }
+        
         return dp[nums.length - 1];
     }
 }

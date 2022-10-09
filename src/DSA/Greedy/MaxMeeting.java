@@ -30,10 +30,10 @@ import java.util.Comparator;
 public class MaxMeeting {
     public static void main(String[] args) {
         // Starting time
-        int s[] = {1, 3, 0, 5, 8, 5};
+        int[] s = {1, 3, 0, 5, 8, 5};
         
         // Finish time
-        int f[] = {2, 4, 6, 7, 9, 9};
+        int[] f = {2, 4, 6, 7, 9, 9};
         
         // Defining an arraylist of meet type
         ArrayList<Meeting> meet = new ArrayList<>();

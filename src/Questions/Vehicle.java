@@ -27,8 +27,8 @@ public class Vehicle {
 }
 
 class Bus extends Vehicle {
-    private int passenger;
-    private String maker;
+    private final int passenger;
+    private final String maker;
     
     public Bus(String maker) {
         super(8);

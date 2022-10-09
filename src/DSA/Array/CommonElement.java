@@ -10,7 +10,7 @@ public class CommonElement {
         System.out.println(commonElements(a, b, c, a.length, b.length, c.length));
     }
     
-    public static ArrayList<Integer> commonElements(int nums1[], int nums2[], int nums3[], int n1, int n2, int n3) {
+    public static ArrayList<Integer> commonElements(int[] nums1, int[] nums2, int[] nums3, int n1, int n2, int n3) {
         // code here
         ArrayList<Integer> common = new ArrayList<>();
         int i = 0, j = 0, k = 0;

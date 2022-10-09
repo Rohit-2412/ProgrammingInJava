@@ -11,7 +11,7 @@ public class LongestCommonSubseq {
         System.out.println(findLongestConseqSubseq(arr, arr.length));
     }
     
-    static int findLongestConseqSubseq(int arr[], int N) {
+    static int findLongestConseqSubseq(int[] arr, int N) {
         // add your code here
         if (arr.length == 1) return 1;
         Set<Integer> map = new HashSet<>();

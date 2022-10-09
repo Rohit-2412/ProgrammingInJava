@@ -2,9 +2,9 @@ package Questions;
 
 // Rectangle class implementation
 public class RectangleQuestion {
-    private int width; // data member
-    private int height; // data member
-    private CoordinatePoint location; // data member
+    private final int width; // data member
+    private final int height; // data member
+    private final CoordinatePoint location; // data member
     
     //    default constructor
     public RectangleQuestion() {
