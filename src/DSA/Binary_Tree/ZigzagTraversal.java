@@ -3,7 +3,8 @@ package DSA.Binary_Tree;
 import Utility.FillArray;
 
 import java.util.ArrayList;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class ZigzagTraversal {
     public static void main(String[] args) {
@@ -18,47 +19,38 @@ public class ZigzagTraversal {
             return new ArrayList<>();
         }
         
-        Stack<Node> currLevel = new Stack<>();
-        Stack<Node> nextLevel = new Stack<>();
         ArrayList<Integer> ans = new ArrayList<>();
         boolean lToR = true;
-        currLevel.add(root);
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
         
-        while (!currLevel.isEmpty()) {
-            Node temp = currLevel.peek();
-            currLevel.pop();
+        while (!q.isEmpty()) {
             
-            if (temp != null) {
-                ans.add(temp.data);
+            // array store current level
+            int[] arr = new int[q.size()];
+            
+            // processing current level
+            for (int i = 0; i < q.size(); i++) {
+                // popping node
+                Node front = q.poll();
                 
-                if (lToR) {
-                    if (temp.left != null) {
-                        nextLevel.push(temp.left);
-                    }
-                    
-                    if (temp.right != null) {
-                        nextLevel.push(temp.right);
-                    }
-                }
-                else {
-                    if (temp.right != null) {
-                        nextLevel.push(temp.right);
-                    }
-                    
-                    if (temp.left != null) {
-                        nextLevel.push(temp.left);
-                    }
-                    
-                }
+                // getting index
+                int index = lToR ? i : q.size() - i - 1;
+                arr[index] = front.data;
+                
+                // if left exist adding it to queue
+                if (front.left != null) q.add(front.left);
+                
+                // if right exist adding it to queue
+                if (front.right != null) q.add(front.right);
             }
             
-            if (currLevel.isEmpty()) {
-                lToR = !lToR;
-                
-                Stack<Node> x = currLevel;
-                currLevel = nextLevel;
-                nextLevel = x;
-            }
+            // changing direction
+            lToR = !lToR;
+            
+            // adding to answer list
+            for (int i : arr)
+                ans.add(i);
         }
         
         return ans;

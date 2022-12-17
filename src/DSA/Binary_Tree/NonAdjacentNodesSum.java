@@ -55,16 +55,16 @@ public class NonAdjacentNodesSum {
         return Math.max(ans.first, ans.second);
     }
     
-    private static pair helper(Node root) {
+    static pair helper(Node root) {
         if (root == null) return new pair(0, 0);
-        
+        // sum including nodes as current level
         pair l = helper(root.left);
+        // sum excluding nodes as current level
         pair r = helper(root.right);
         
         pair temp = new pair();
         temp.first = l.second + r.second + root.data;
-        temp.second = Math.max(l.first, l.second) +
-                Math.max(r.first, r.second);
+        temp.second = Math.max(l.first, l.second) + Math.max(r.first, r.second);
         
         return temp;
         
