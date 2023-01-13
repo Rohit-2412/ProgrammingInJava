@@ -2,3 +2,5 @@
 .idea/
 out/
 test/
+src/Utility/Main.java
+.DS_Store
