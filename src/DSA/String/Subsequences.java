@@ -1,7 +1,6 @@
 package DSA.String;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 // Program to print all the subsequences of a string.

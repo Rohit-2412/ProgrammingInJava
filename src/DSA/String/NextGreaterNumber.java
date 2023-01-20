@@ -1,6 +1,8 @@
 package DSA.String;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class NextGreaterNumber {
     static List<Integer> greaterNumber(int[] nums) {

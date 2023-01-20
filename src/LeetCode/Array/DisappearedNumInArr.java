@@ -13,16 +13,17 @@ Input: nums = [1,1]
 Output: [2]
 */
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public class DisappearedNumInArr {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 7};
+        int[] arr = { 1, 2, 3, 4, 5, 7 };
         List<Integer> ans = findDisappearedNumbers(arr);
         System.out.println(ans);
     }
-    
-    
+
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> missingNum = new ArrayList<>();
         HashSet<Integer> numbers = new HashSet<>();

@@ -1,6 +1,5 @@
 package Questions;
 
-import javax.print.attribute.HashAttributeSet;
 import java.util.Objects;
 
 public class SpellChecker {

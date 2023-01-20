@@ -15,7 +15,7 @@ non-decreasing order.
         Output: [4,9,9,49,121]
 */
 
-import java.util.*;
+import java.util.PriorityQueue;
 
 import static java.lang.System.out;
 

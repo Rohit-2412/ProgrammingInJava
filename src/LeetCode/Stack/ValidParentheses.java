@@ -1,7 +1,6 @@
 package LeetCode.Stack;
 
 import java.util.Stack;
-import java.lang.String;
 
 public class ValidParentheses {
     public static void main(String[] args) {
